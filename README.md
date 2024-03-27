@@ -1,6 +1,11 @@
 # washcloth
 It's a RAG.
 
+## Usage
+```
+$ python3 app.py
+```
+
 ## Answer these questions
 * Which two companies created the R.31 reconnaissance aircraft?
 * What guns were mounted on the Renard R.31?

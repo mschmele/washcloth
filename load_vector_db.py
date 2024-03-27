@@ -5,22 +5,14 @@ from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores.chroma import Chroma
 import os
 import shutil
-from getpass import getpass
-
-OPENAI_API_KEY = getpass()
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 CHROMA_PATH = "chroma"
-OpenAIKey_Path = "openaikey.txt"
-
 
 def main():
     documents = load_documents()
     chunks = split_text(documents)
     save_to_chroma(chunks)
     
-
-
 def load_documents():
     loader = DirectoryLoader("data/", glob="*.pdf")
     documents = loader.load()
